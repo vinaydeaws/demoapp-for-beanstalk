@@ -16,7 +16,7 @@ export class CdkPipelineStack extends Stack {
        // How it will be built and synthesized
        synth: new ShellStep('Synth', {
          // Where the source can be found
-         input: CodePipelineSource.gitHub('https://github.com/vinaydeaws/demoapp-for-beanstalk.git', 'main'),
+         input: CodePipelineSource.gitHub('vinaydeaws/demoapp-for-beanstalk', 'main'),
          
          // Install dependencies, build and run cdk synth
          installCommands: ['npm i -g npm@latest'],
